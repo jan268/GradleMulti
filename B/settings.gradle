@@ -1,1 +1,3 @@
 rootProject.name = 'B'
+include ':library'
+project(':library').projectDir = new File('../library')

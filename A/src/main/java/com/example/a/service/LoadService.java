@@ -1,7 +1,7 @@
 package com.example.a.service;
 
 
-import com.example.a.Human;
+import com.example.library.dto.Human;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;

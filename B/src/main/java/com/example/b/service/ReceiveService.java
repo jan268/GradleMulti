@@ -1,6 +1,6 @@
 package com.example.b.service;
 
-import com.example.b.Human;
+import com.example.library.dto.Human;
 import lombok.extern.slf4j.Slf4j;
 import net.openhft.chronicle.Chronicle;
 import net.openhft.chronicle.ChronicleQueueBuilder;

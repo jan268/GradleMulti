@@ -18,7 +18,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation group: 'net.openhft', name: 'chronicle', version: '3.6.4'
-//    implementation project(':library')
+    implementation project(':library')
 }
 
 tasks.named('test') {
