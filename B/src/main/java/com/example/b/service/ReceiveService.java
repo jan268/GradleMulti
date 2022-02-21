@@ -23,10 +23,8 @@ public class ReceiveService {
             log.info("Chronicle size: " + chronicle.size());
             List<Human> objects = new ArrayList<>();
             while (tailer.nextIndex()) {
-                Human human = new Human();
-                tailer.readInstance(Human.class, human);
-                log.info(human.getCity());
-                objects.add(human);
+                Human human1 = tailer.readInstance(Human.class, new Human());
+                objects.add(human1);
                 tailer.finish();
                 log.info("Current index: " + tailer.index());
             }
