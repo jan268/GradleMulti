@@ -15,7 +15,7 @@ import java.util.List;
 @Slf4j
 public class ReceiveService {
 
-    public void loadFromQueue() {
+    public List<Human> loadFromQueue() {
         try {
             File queueDir = new File("chronicle-queue-send");
             Chronicle chronicle = ChronicleQueueBuilder.indexed(queueDir).build();
@@ -37,8 +37,10 @@ public class ReceiveService {
 
             log.info("Size: " + objects.size());
             objects.forEach(l -> log.info(l.toString()));
+            return objects;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return null;
     }
 }
